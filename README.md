@@ -473,4 +473,4 @@ only after the participant moves the slider.
 ## BEER Lab template
 
 Institutional copy maintained by BEER Lab at Tecnológico de Monterrey.
-Based on the original oTree template by ecastrom.
+Based on the original oTree template by ecastrom. Manteined by the BEER lab team.
