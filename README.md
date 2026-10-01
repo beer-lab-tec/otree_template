@@ -469,3 +469,8 @@ only after the participant moves the slider.
 9. Facilitator manual, `SESSION_NOTES.md`, `CHANGELOG.md`. Secrets in
    environment variables. Deploy; resetdb on every target; not during a
    session.
+
+## BEER Lab template
+
+Institutional copy maintained by BEER Lab at Tecnológico de Monterrey.
+Based on the original oTree template by ecastrom.
