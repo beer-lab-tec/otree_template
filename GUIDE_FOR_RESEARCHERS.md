@@ -275,13 +275,17 @@ git clone <your repo url> /tmp/fresh && cd /tmp/fresh && pip install -r requirem
 1. Put `settings.py` and `requirements.txt` at the root of the project
    folder (section 2).
 2. Zip the folder as **`<subdomain>-v1.zip`**, without `.venv`, `db.sqlite3`,
-   `__pycache__`, CSV/XLSX exports or any data. Over 20 MB: share a OneDrive
-   link instead of attaching.
+   `__pycache__`, CSV/XLSX exports or any data. `settings.py` and
+   `requirements.txt` must be at the root of the zip (or inside one single
+   folder). The server accepts zips of up to **40 MB**; over 20 MB, share a
+   OneDrive link instead of attaching. No `Procfile`, `runtime.txt` or
+   Dockerfile is needed: the server uses its own recipe (Python 3.11, oTree
+   from your `requirements.txt`).
 3. E-mail it to **lab.economia@servicios.tec.mx**, subject
    `[oTree] <subdomain> v1 — investigación` (or `— docencia` for a classroom
    game), with the details of 5.2–5.4 in the body.
-4. The lab deploys it by hand (allow a few working days; say your session
-   dates), replies with the URL, and hands over the admin password in person
+4. The lab deploys it from its deployment panel (allow a few working days;
+   say your session dates), replies with the URL, and hands over the admin password in person
    or by phone — never by e-mail. If the build fails you get the error and a
    suggested fix; send `<subdomain>-v2.zip`.
 5. Every later version is a new zip with the next number. Model changes reset
@@ -297,7 +301,7 @@ https://teaching.beer-lab.org/guia/ (teaching) say the same in Spanish.
 
 Rules for `<name>` in `<name>.beer-lab.org`:
 
-- 3–15 characters, lowercase letters, digits and hyphens only, starts with a
+- 3–20 characters, lowercase letters, digits and hyphens only, starts with a
   letter. Examples: `beca`, `precios`, `mercado2`, `encuestas-dei`.
 - **Neutral for participants.** The address is visible to them on every page.
   Do not name the treatment, the hypothesis or the construct (`sesgo-genero`,
@@ -344,6 +348,13 @@ is trying to guess the purpose: if you can guess it, rewrite it.
 Do **not** ask the lab to deploy a code change during or right before a
 session: a deploy restarts the game and drops participants who are mid-page
 for a few seconds; a model change wipes the database (§6.3).
+
+When the lab publishes a **new** game (yours or anyone else's), every
+`*.beer-lab.org` address, yours included, is unreachable for about 15 seconds
+(the browser shows a Cloudflare "Error 1033" page; reloading fixes it). The lab
+does not publish new games during scheduled sessions, so **tell the lab your
+session dates and times**. If a participant ever sees that page, they should
+wait a few seconds and reload: their progress is kept.
 
 ### 6.3 Updating your code
 
